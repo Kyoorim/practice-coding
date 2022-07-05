@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <div id="root"></div>
+    <!-- react Dom이 react element를 가져다 놓을 곳 -->
+  </body>
+  <script src="https://unpkg.com/react@18.0.0/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.0.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // const root = document.getElementById("root");
+    //JSX로 쓸 경우
+
+    function Btn({ banana, realGreen }) {
+      // console.log(banana);
+      return (
+        <button
+          style={{
+            backgroundColor: realGreen ? "darkgreen" : "yellowgreen",
+            color: "white",
+            border: 0,
+            padding: "15px 25px",
+            borderRadius: 10,
+            fontWeight: 600,
+            margin: "10px 10px",
+          }}
+        >
+          {banana}
+        </button>
+      );
+    }
+
+    function App() {
+      return (
+        <div>
+          <Btn banana="Basil Cream" realGreen={true} />
+          <Btn banana="Avocado Cream" />
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, root);
+  </script>
+</html>

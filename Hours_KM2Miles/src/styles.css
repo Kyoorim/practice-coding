@@ -1,0 +1,17 @@
+* {
+  margin: 0.5rem;
+}
+
+#practice {
+  padding: 1rem;
+  font-size: 2rem;
+  background: powderblue;
+  border-radius: 1rem;
+  transition: 0.5s;
+}
+
+#practice:hover {
+  background: cornflowerblue;
+  color: white;
+  transition: 0.5s;
+}
